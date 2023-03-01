@@ -26,6 +26,10 @@ namespace Return
       Console.WriteLine(outcome2); // False
       Console.WriteLine(nameAsInt); // 0 (can't be done)
 
+      // Using Out
+      string statement = "GARRR";
+      Console.WriteLine(Whisper(statement, out bool marker));
+
     }
     // Method returning a string
     static string DecoratePlanet(string planet)
@@ -38,6 +42,13 @@ namespace Return
     {
       bool answer = true;
       return answer;
+    }
+
+    static string Whisper(string statement, out bool marker)
+    {
+      marker = true;
+      Console.WriteLine(marker);
+      return statement.ToLower();
     }
 
 
